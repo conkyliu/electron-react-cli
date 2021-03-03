@@ -1,0 +1,72 @@
+{
+  "name": "LTG-TV-AD",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "homepage": "./",
+  "author": "Conky, Inc <conkyliu@163.com>",
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.13.0",
+    "antd-dayjs-webpack-plugin": "^1.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "estart": "cross-env NODE_ENV=development electron .",
+    "package": "node package.js",
+    "ebuild": "electron-builder",
+    "ebuild:pi": "electron-builder build -l  --armv7l",
+    "ebuild:mac": "electron-builder build -m",
+    "ebuild:win": "electron-builder build -w"
+  },
+  "build": {
+    "appId": "com.ltg-tv-ad.app",
+    "productName": "LTG-TV-AD",
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5",
+    "react-app-rewired": "^2.1.8"
+  }
+}
